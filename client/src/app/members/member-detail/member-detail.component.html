@@ -1,0 +1,53 @@
+<div class="row" *ngIf="member">
+  <div class="col-4">
+    <div class="card">
+      <img src="{{member.profilePhoto || './assets/user.png'}}" alt="{{member.alias}}" class="card-img-top img-thumbnail">
+      <div class="card-body">
+        <div>
+          <strong>Location:</strong>
+          <p>{{member.city}}, {{member.country}}</p>
+        </div>
+        <div>
+          <strong>Age:</strong>
+          <p>{{member.age}}</p>
+        </div>
+        <div>
+          <strong>Sign up date:</strong>
+          <p>{{member.accountRegistrationDate}}</p>
+        </div>
+        <div>
+          <strong>Last logon:</strong>
+          <p>{{member.lastLogon}}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Like</button>
+          <button class="btn btn-success">Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <tabset class="member-tabset">
+      <tab heading="About {{member.alias}}">
+        <h4>Bio</h4>
+        <p>{{member.bio}}</p>
+
+        <h4>Seeking</h4>
+        <p>{{member.seeking}}</p>
+      </tab>
+      <tab heading="Interests">
+        <h4>Interests</h4>
+        <p>{{member.interest}}</p>
+      </tab>
+      <tab heading="Photos">
+        <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+      </tab>
+      <tab heading="Messages">
+        <p>messages</p>
+      </tab>
+    </tabset>
+  </div>
+</div>
