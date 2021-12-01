@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Member} from '../../_models/member';
 import {MemberService} from '../../_services/member.service';
 import {ActivatedRoute} from '@angular/router';
 import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from '@kolkov/ngx-gallery';
+import {TabsetComponent} from 'ngx-bootstrap/tabs';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-member-detail',
@@ -10,11 +12,12 @@ import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from '@kolkov/n
   styleUrls: ['./member-detail.component.css']
 })
 export class MemberDetailComponent implements OnInit {
+  @ViewChild('memberTabs') memberTabs: TabsetComponent;
   member: Member;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 
-  constructor(private memberService: MemberService, private route: ActivatedRoute) { }
+  constructor(private memberService: MemberService, private route: ActivatedRoute, private toastrService: ToastrService) { }
 
   ngOnInit(): void {
     this.loadMember();
@@ -48,5 +51,15 @@ export class MemberDetailComponent implements OnInit {
       this.member = m;
       this.galleryImages = this.getPhotos();
     })
+  }
+
+  addLike(member: Member) {
+    this.memberService.likeUser(member.userName).subscribe(() => {
+      this.toastrService.success("Liked " + member.alias);
+    })
+  }
+
+  selectMessage() {
+    this.memberTabs.tabs[3].active = true;
   }
 }

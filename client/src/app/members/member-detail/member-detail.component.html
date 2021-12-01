@@ -13,24 +13,24 @@
         </div>
         <div>
           <strong>Sign up date:</strong>
-          <p>{{member.accountRegistrationDate}}</p>
+          <p>{{member.accountRegistrationDate | date: 'short'}}</p>
         </div>
         <div>
           <strong>Last logon:</strong>
-          <p>{{member.lastLogon}}</p>
+          <p>{{member.lastLogon | date: 'short'}}</p>
         </div>
       </div>
       <div class="card-footer">
         <div class="btn-group d-flex">
-          <button class="btn btn-primary">Like</button>
-          <button class="btn btn-success">Message</button>
+          <button class="btn btn-primary" (click)="addLike(member)">Like</button>
+          <button class="btn btn-success" (click)="selectMessage()">Message</button>
         </div>
       </div>
     </div>
   </div>
 
   <div class="col-8">
-    <tabset class="member-tabset">
+    <tabset class="member-tabset" #memberTabs>
       <tab heading="About {{member.alias}}">
         <h4>Bio</h4>
         <p>{{member.bio}}</p>
@@ -46,7 +46,7 @@
         <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
       </tab>
       <tab heading="Messages">
-        <p>messages</p>
+        <app-member-messages [username]="member.userName"></app-member-messages>
       </tab>
     </tabset>
   </div>

@@ -23,6 +23,8 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {LoadingInterceptor} from './_interceptors/loading.interceptor';
 import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
+import {ButtonsModule} from 'ngx-bootstrap/buttons';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
     ServerErrorComponent,
     MemberCardComponent,
     MemberEditComponent,
-    PhotoEditComponent
+    PhotoEditComponent,
+    MemberMessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ButtonsModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
