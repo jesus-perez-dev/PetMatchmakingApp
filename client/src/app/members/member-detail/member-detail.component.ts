@@ -62,4 +62,11 @@ export class MemberDetailComponent implements OnInit {
   selectMessage() {
     this.memberTabs.tabs[3].active = true;
   }
+
+  report(member: Member) {
+    this.toastrService.error("todo");
+    // this.memberService.reportUser(member.userName).subscribe(() => {
+    //   this.toastrService.success("Reported " + member.alias);
+    // })
+  }
 }

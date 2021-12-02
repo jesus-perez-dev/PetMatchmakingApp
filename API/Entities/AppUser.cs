@@ -27,6 +27,8 @@ namespace API.Entities
         public ICollection<Message> MessagesReceived { get; set; }
         public bool IsAdmin { get; set; }
         public bool IsBanned { get; set; }
+        public bool IsReported { get; set; }
+        public int ReportCount { get; set; } = 0;
 
         public int GetAge()
         {

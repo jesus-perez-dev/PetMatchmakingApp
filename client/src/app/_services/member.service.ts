@@ -55,6 +55,11 @@ export class MemberService {
     return this.http.post(`${this.baseUrl}connections/${username}`, {})
   }
 
+  // todo
+  reportUser(username: string) {
+    // return this.http.post(`${this.baseUrl}users/report/${username}`, {})
+  }
+
   getConnectionByType(connectionType: string) {
     return this.http.get<Partial<Member[]>>(`${this.baseUrl}connections?connectionType=${connectionType}`)
   }
