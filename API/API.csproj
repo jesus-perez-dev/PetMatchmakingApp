@@ -17,4 +17,20 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\3rdpartylicenses.txt" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\user.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\favicon.ico" />
+    <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.1e59d2330b4c6deb84b3.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.20fd1704ea223900efa9.woff2" />
+    <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.8b43027f47b20503057d.eot" />
+    <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\fontawesome-webfont.f691f37e57f04c152e23.woff" />
+    <_ContentIncludedByDefault Remove="wwwroot\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\main.aba333ff9eff0c264c8b.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\polyfills.7d99fe739f19bbf4acee.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\runtime.4b1540bf51da5ef20c67.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\styles.4d77acd4b3ecd761c063.css" />
+  </ItemGroup>
+
 </Project>
