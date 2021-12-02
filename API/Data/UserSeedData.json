@@ -13,7 +13,7 @@
     "Country": "Lithuania",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/59.jpg",
+        "Url": "https://randomuser.me/api/portraits/women/59.jpg",
         "IsProfilePic": true
       }
     ]
@@ -32,7 +32,7 @@
     "Country": "Norfolk Island",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/75.jpg",
+        "Url": "https://randomuser.me/api/portraits/women/75.jpg",
         "IsProfilePic": true
       }
     ]
@@ -51,7 +51,7 @@
     "Country": "Falkland Islands (Malvinas)",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/27.jpg",
+        "Url": "https://randomuser.me/api/portraits/women/27.jpg",
         "IsProfilePic": true
       }
     ]
@@ -70,7 +70,7 @@
     "Country": "Guinea",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/98.jpg",
+        "Url": "https://randomuser.me/api/portraits/women/98.jpg",
         "IsProfilePic": true
       }
     ]
@@ -89,7 +89,7 @@
     "Country": "Niue",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/41.jpg",
+        "Url": "https://randomuser.me/api/portraits/women/41.jpg",
         "IsProfilePic": true
       }
     ]
@@ -108,7 +108,7 @@
     "Country": "Guinea-Bissau",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/41.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/41.jpg",
         "IsProfilePic": true
       }
     ]
@@ -127,7 +127,7 @@
     "Country": "Finland",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/60.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/60.jpg",
         "IsProfilePic": true
       }
     ]
@@ -146,7 +146,7 @@
     "Country": "Suriname",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/81.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/81.jpg",
         "IsProfilePic": true
       }
     ]
@@ -165,7 +165,7 @@
     "Country": "Niger",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/38.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/38.jpg",
         "IsProfilePic": true
       }
     ]
@@ -184,7 +184,7 @@
     "Country": "Bosnia and Herzegovina",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/81.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/81.jpg",
         "IsProfilePic": true
       }
     ]
