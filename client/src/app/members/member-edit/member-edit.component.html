@@ -21,11 +21,11 @@
         </div>
         <div>
           <strong>Sign up date:</strong>
-          <p>{{member.accountRegistrationDate}}</p>
+          <p>{{member.accountRegistrationDate | date: 'short'}}</p>
         </div>
         <div>
           <strong>Last logon:</strong>
-          <p>{{member.lastLogon}}</p>
+          <p>{{member.lastLogon | date: 'short'}}</p>
         </div>
       </div>
       <div class="card-footer">
@@ -40,6 +40,9 @@
     <tabset class="member-tabset">
       <tab heading="About {{member.alias}}">
         <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+          <h4>Alias</h4>
+          <textarea name="bio" rows="1" class="form-control" [(ngModel)]="member.alias"></textarea>
+
           <h4>Bio</h4>
           <textarea name="bio" rows="6" class="form-control" [(ngModel)]="member.bio"></textarea>
 

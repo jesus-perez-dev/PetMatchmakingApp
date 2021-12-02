@@ -9,7 +9,10 @@ import {ToastrService} from 'ngx-toastr';
 })
 export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
-  model: any = {}
+  form: any = {
+    gender: 'male',
+    birthdate: '2000-01-01'
+  }
 
   constructor(private accountService: AccountService, private toastr: ToastrService) { }
 
@@ -17,7 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    this.accountService.register(this.model).subscribe(r => {
+    this.accountService.register(this.form).subscribe(r => {
       console.log(r);
       this.cancel();
     }, error => {

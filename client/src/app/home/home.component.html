@@ -1,10 +1,10 @@
 <div class="container mt-5">
-  <div style="text-align: center" *ngIf="!registering">
+  <div style="text-align: center" *ngIf="!registering && !info">
     <h1>Pet Matchmaking App</h1>
     <p class="lead">Register and find a match!</p>
     <div class="text-center">
       <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
-      <button class="btn btn-info btn-lg">Info</button>
+      <button class="btn btn-info btn-lg" (click)="infoToggle()">Info</button>
     </div>
   </div>
 
@@ -12,6 +12,14 @@
     <div class="row justify-content-center">
       <div class="col-4">
         <app-register (cancelRegister)="cancelRegistering($event)"></app-register>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="info">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <app-info (cancelInfo)="cancelInfo($event)"></app-info>
       </div>
     </div>
   </div>

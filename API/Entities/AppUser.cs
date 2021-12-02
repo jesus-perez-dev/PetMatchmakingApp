@@ -25,6 +25,8 @@ namespace API.Entities
         public ICollection<Connection> LikedUsers { get; set; }
         public ICollection<Message> MessagesSent { get; set; }
         public ICollection<Message> MessagesReceived { get; set; }
+        public bool IsAdmin { get; set; }
+        public bool IsBanned { get; set; }
 
         public int GetAge()
         {

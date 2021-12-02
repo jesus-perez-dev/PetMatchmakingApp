@@ -36,7 +36,12 @@ namespace API.Controllers
             {
                 UserName = registerDto.UserName.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
-                PasswordSalt = hmac.Key
+                PasswordSalt = hmac.Key,
+                Alias = registerDto.Alias,
+                Gender = registerDto.Gender,
+                Birthdate = registerDto.Birthdate,
+                City = registerDto.City,
+                Country = registerDto.Country
             };
 
             _context.Users.Add(user);

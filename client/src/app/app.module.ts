@@ -25,6 +25,7 @@ import {LoadingInterceptor} from './_interceptors/loading.interceptor';
 import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MemberMessagesComponent } from './members/member-messages/member-messag
     MemberCardComponent,
     MemberEditComponent,
     PhotoEditComponent,
-    MemberMessagesComponent
+    MemberMessagesComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

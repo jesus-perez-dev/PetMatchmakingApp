@@ -154,5 +154,30 @@ namespace API.Controllers
             }
             return BadRequest("Could not delete photo");
         }
+        
+        // todo: auth so only admin uses
+        [HttpPut("ban-user/{username}")]
+        public async Task<ActionResult> BanUser(string username)
+        {
+            var user = await _userRepo.GetUserByUsername(username);
+            user.IsBanned = true;
+            if (await _userRepo.SaveChanges())
+            {
+                return NoContent();
+            }
+            return BadRequest("Error during profile picture change");
+        }
+        
+        [HttpPut("make-user-admin/{username}")]
+        public async Task<ActionResult> MakeUserAdmin(string username)
+        {
+            var user = await _userRepo.GetUserByUsername(username);
+            user.IsAdmin = true;
+            if (await _userRepo.SaveChanges())
+            {
+                return NoContent();
+            }
+            return BadRequest("Error during profile picture change");
+        }
     }
 }

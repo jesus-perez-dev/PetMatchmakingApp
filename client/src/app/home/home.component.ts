@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   registering = false;
+  info = false;
 
   constructor() { }
 
@@ -14,10 +15,18 @@ export class HomeComponent implements OnInit {
   }
 
   registerToggle() {
-    this.registering = !this.registering;
+    this.registering = true;
   }
 
   cancelRegistering(event: boolean) {
     this.registering = event;
+  }
+
+  infoToggle() {
+    this.info = true;
+  }
+
+  cancelInfo(event: boolean) {
+    this.info = event;
   }
 }

@@ -20,5 +20,6 @@ namespace API.DTOs
         public string Country { get; set; }
         public ICollection<PhotoDto> Photos { get; set; }
         public string ProfilePhoto { get; set; }
-    }
+        public bool IsAdmin { get; set; }
+        public bool IsBanned { get; set; }    }
 }

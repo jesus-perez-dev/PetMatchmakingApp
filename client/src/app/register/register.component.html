@@ -2,8 +2,27 @@
   <h2 class="text-center text-primary">Sign up</h2>
   <hr>
   <div class="form-group">
-    <input type="text" class="form-control" name="username" [(ngModel)]="model.username" placeholder="Username">
-    <input type="password" class="form-control" name="password" [(ngModel)]="model.password" placeholder="Password">
+    <input type="text" class="form-control" name="username" [(ngModel)]="form.username" placeholder="Username">
+    <input type="password" class="form-control" name="password" [(ngModel)]="form.password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="alias" [(ngModel)]="form.alias" placeholder="Alias">
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" name="city" [(ngModel)]="form.city" placeholder="City">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="country" [(ngModel)]="form.country" placeholder="Country">
+      </div>
+    </div>
+    <label for="gender">Gender</label>
+    <select id="gender" class="form-select" name="gender" [(ngModel)]="form.gender" title="Gender">
+      <option [ngValue]="'male'" selected>Male</option>
+      <option [ngValue]="'female'">Female</option>
+      <option [ngValue]="'other'">Other</option>
+    </select>
+    <label for="birthdate">Birthdate</label>
+    <input type="date" id="birthdate" class="form-control" name="birthdate" [(ngModel)]="form.birthdate" placeholder="Birthdate">
   </div>
   <div class="form-group text-center">
     <button class="btn btn-success mr-2" type="submit">Register</button>
