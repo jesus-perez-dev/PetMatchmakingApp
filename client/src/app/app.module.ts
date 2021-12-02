@@ -26,6 +26,7 @@ import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 import { InfoComponent } from './info/info.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { InfoComponent } from './info/info.component';
     MemberEditComponent,
     PhotoEditComponent,
     MemberMessagesComponent,
-    InfoComponent
+    InfoComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
