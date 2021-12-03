@@ -41,7 +41,7 @@
       <tab heading="About {{member.alias}}">
         <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
           <h4>Alias</h4>
-          <textarea name="bio" rows="1" class="form-control" [(ngModel)]="member.alias"></textarea>
+          <textarea name="alias" rows="1" class="form-control" [(ngModel)]="member.alias"></textarea>
 
           <h4>Bio</h4>
           <textarea name="bio" rows="6" class="form-control" [(ngModel)]="member.bio"></textarea>
